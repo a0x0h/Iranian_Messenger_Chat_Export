@@ -1,1 +1,44 @@
-#bale-export-toast{position:fixed;z-index:2147483647;left:24px;bottom:24px;width:min(360px,calc(100vw - 48px));padding:14px 16px;border-radius:12px;background:#17212beF;color:white;box-shadow:0 12px 36px #0005;font:13px/1.45 system-ui,sans-serif;direction:ltr}#bale-export-toast progress{width:100%;height:6px;margin-top:8px;accent-color:#27b6ef}
+#bale-export-toast {
+  position: fixed;
+  z-index: 2147483647;
+  inset-inline-start: 24px;
+  bottom: 24px;
+  width: min(380px, calc(100vw - 48px));
+  padding: 13px 15px;
+  border-radius: 14px;
+  background: #17212bf2;
+  color: #fff;
+  box-shadow: 0 14px 40px #00000055;
+  font: 13px/1.45 system-ui, sans-serif;
+  direction: ltr;
+}
+
+#bale-export-toast.bx-error { background: #5c2020f2; }
+
+#bale-export-toast .bx-head {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+#bale-export-toast .bx-msg { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+
+#bale-export-toast .bx-cancel {
+  flex: none;
+  border: 1px solid #ffffff40;
+  background: transparent;
+  color: #fff;
+  border-radius: 8px;
+  padding: 3px 10px;
+  font: inherit;
+  cursor: pointer;
+}
+
+#bale-export-toast .bx-cancel:hover { background: #ffffff1f; }
+
+#bale-export-toast progress {
+  width: 100%;
+  height: 6px;
+  margin-top: 9px;
+  accent-color: #27b6ef;
+}

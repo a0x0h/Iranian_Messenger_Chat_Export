@@ -1,23 +1,35 @@
 {
   "manifest_version": 3,
-  "name": "Bale Chat Export",
-  "version": "1.2.0",
-  "description": "Export one complete Bale Web conversation as a Telegram-style HTML and JSON archive.",
-  "permissions": ["activeTab"],
-  "host_permissions": ["https://web.bale.ai/*", "https://*.bale.ai/*"],
+  "name": "Iranian Messenger Chat Export",
+  "version": "2.1.0",
+  "description": "Export one complete Bale, Eitaa, or Rubika conversation as a Telegram-style HTML and JSON archive.",
+  "permissions": ["activeTab", "storage"],
+  "host_permissions": [
+    "https://web.bale.ai/*",
+    "https://*.bale.ai/*",
+    "https://web.eitaa.com/*",
+    "https://web.rubika.ir/*"
+  ],
   "action": {
-    "default_title": "Export Bale chat",
-    "default_popup": "popup.html"
+    "default_title": "Export messenger chat",
+    "default_popup": "popup.html",
+    "default_icon": "bale-logo.png"
+  },
+  "icons": {
+    "16": "bale-logo.png",
+    "32": "bale-logo.png",
+    "48": "bale-logo.png",
+    "128": "bale-logo.png"
   },
   "content_scripts": [
     {
-      "matches": ["https://web.bale.ai/*"],
+      "matches": ["https://web.bale.ai/*", "https://web.eitaa.com/*", "https://web.rubika.ir/*"],
       "js": ["main-world.js"],
       "run_at": "document_start",
       "world": "MAIN"
     },
     {
-      "matches": ["https://web.bale.ai/*"],
+      "matches": ["https://web.bale.ai/*", "https://web.eitaa.com/*", "https://web.rubika.ir/*"],
       "js": ["lib/zip.js", "content.js"],
       "css": ["content.css"],
       "run_at": "document_idle"
