@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="popup.css"></head>
+<body>
+  <main>
+    <div class="brand"><span class="logo">B</span><div><h1>Bale Chat Export</h1><p>Telegram-style local archive</p></div></div>
+    <label class="check"><input id="media" type="checkbox" checked><span>Download photos, videos, voice messages and files</span></label>
+    <label>Maximum wait while loading history
+      <select id="timeout"><option value="5">5 minutes</option><option value="15" selected>15 minutes</option><option value="30">30 minutes</option><option value="0">No time limit</option></select>
+    </label>
+    <button id="export">Export open chat</button>
+    <button id="cancel" class="secondary" hidden>Cancel</button>
+    <div id="status" role="status">Open a conversation in Bale Web first.</div>
+    <progress id="progress" max="100" value="0" hidden></progress>
+    <p class="privacy">Your chat stays on this device. Nothing is sent to another server.</p>
+  </main><script src="popup.js"></script>
+</body></html>
